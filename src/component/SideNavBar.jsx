@@ -24,6 +24,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import Home from '../pages/Home';
 import Inbox from '../pages/Inbox';
 import Settings from '../pages/Settings';
+import DataTablePage from '../pages/DataTablePage';
 
 const drawerWidth = 240;
 
@@ -109,6 +110,7 @@ const menuItems = [
   { text: 'Home', path: '/', icon: <HomeIcon /> },
   { text: 'Inbox', path: '/inbox', icon: <InboxIcon /> },
   { text: 'Setting', path: '/settings', icon: <SettingsIcon /> },
+  { text: 'Data', path: '/dataTablePage', icon: <SettingsIcon /> },
 ];
 
 export default function SideNavBar() {
@@ -190,6 +192,7 @@ export default function SideNavBar() {
     <Route path="/" element={<Home />} />
     <Route path="/inbox" element={<Inbox />} />
     <Route path="/settings" element={<Settings />} />
+    <Route path="/dataTablePage" element={<DataTablePage />} />
   </Routes>
 </Box>
       

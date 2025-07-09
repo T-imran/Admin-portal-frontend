@@ -16,7 +16,7 @@ const darkTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif',
+    fontFamily: '"Poppins", sans-serif',
   },
 });
 

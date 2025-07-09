@@ -20,25 +20,35 @@ export default function Home() {
   return (
     <Box sx={{ p: 3 }}>
       {/* Top cards */}
-      <Grid container spacing={2} mb={4}>
-        {cards.map(({ label, color }) => (
-          <Grid item xs={12} sm={6} md={3} key={label}>
-            <Paper
-              sx={{
-                backgroundColor: color,
-                color: 'white',
-                p: 2,
-                textAlign: 'center',
-                fontWeight: 'bold',
-                borderRadius: 2,
-                boxShadow: 3,
-              }}
-            >
-              {label}
-            </Paper>
-          </Grid>
-        ))}
-      </Grid>
+      <Box
+  sx={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: 2,
+    mb: 4,
+  }}
+>
+  {cards.map(({ label, color }) => (
+    label=='Start'?
+<Paper
+      key={label}
+      sx={{
+        flex: '1 1 200px',  // flexible width with base 200px
+        backgroundColor: color,
+        color: 'white',
+        p: 2,
+        textAlign: 'center',
+        fontWeight: 'bold',
+        borderRadius: 2,
+        boxShadow: 3,
+        minWidth: 150,
+      }}
+    >
+    
+    {label}
+    </Paper> :null
+  ))}
+</Box>
 
       {/* Data Table */}
       <TableContainer component={Paper}>
